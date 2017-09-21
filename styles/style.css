@@ -1,0 +1,99 @@
+h2.title {
+  font-size: 36rem;
+  font-family: opensansbold;
+  color: #343430;
+  text-transform: uppercase;
+  line-height: 1.667;
+  text-align: center;
+  position: relative;
+  margin-bottom: 40rem;
+}
+h2.title::after {
+  content: '';
+  position: absolute;
+  background-image: url(../img/line-listik.png);
+  height: 20px;
+  width: 500px;
+  bottom: -30px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.about {
+  background-image: url(../img/bg-2.png);
+  background-color: #f1f1ef;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.about .gallery {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: space-between;
+  -moz-box-pack: space-between;
+  -ms-flex-pack: replace(space-between, "flex-", "");
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.about .gallery .about-gallery {
+  position: relative;
+  margin-bottom: 10rem;
+  cursor: pointer;
+}
+.about .gallery .about-gallery .about-gallery-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  width: 85%;
+  height: 85%;
+  opacity: 0;
+  background-color: rgba(88, 146, 51, 0.8);
+  text-align: center;
+  padding: 0 30px;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: replace(center, "flex-", "");
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.about .gallery .about-gallery .about-gallery-overlay span {
+  font-size: 18rem;
+  font-family: opensansbold;
+  color: #ffffff;
+  line-height: 1.667;
+  margin-bottom: 15px;
+}
+.about .gallery .about-gallery .about-gallery-overlay img {
+  display: block;
+  margin: 0 auto;
+}
+.about .gallery .about-gallery:hover {
+  -webkit-box-shadow: 0 0px 10px rgba(91, 109, 94, 0.6);
+  box-shadow: 0 0px 10px rgba(91, 109, 94, 0.6);
+}
+.about .gallery .about-gallery:hover .about-gallery-overlay {
+  opacity: 1;
+}
+.about .about-text {
+  font-size: 20rem;
+  font-family: opensans;
+  color: #343430;
+  line-height: 1.8;
+  text-align: justify;
+}

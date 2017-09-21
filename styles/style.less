@@ -1,0 +1,85 @@
+@import "mixins";
+
+h2 {
+  &.title {
+    font-size: 36rem;
+    font-family: opensansbold;
+    color: rgb(52, 52, 48);
+    text-transform: uppercase;
+    line-height: 1.667;
+    text-align: center;
+    position: relative;
+    margin-bottom: 40rem;
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url(../img/line-listik.png);
+      height: 20px;
+      width: 500px;
+      bottom: -30px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.about {
+  background-image: url(../img/bg-2.png);
+  background-color: #f1f1ef;
+  background-repeat: no-repeat;
+  background-position: center;
+  .gallery {
+    .flex-block();
+    .flex-wrap(wrap);
+    .justify-content(space-between);
+    .about-gallery {
+      position: relative;
+      margin-bottom: 10rem;
+      cursor: pointer;
+      .about-gallery-overlay {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        width: 85%;
+        height: 85%;
+        opacity: 0;
+        background-color: rgba(88, 146, 51, 0.8);
+        text-align: center;
+        padding: 0 30px;
+        .flex-block();
+        .justify-content(center);
+        .flex-direction(column);
+        span {
+          font-size: 18rem;
+          font-family: opensansbold;
+          color: rgb(255, 255, 255);
+          line-height: 1.667;
+          margin-bottom: 15px;
+        }
+        img {
+          display: block;
+          margin: 0 auto;
+        }
+      }
+      &:hover {
+        .box-shadow(0 0px 10px rgba(91, 109, 94,0.6));
+        .about-gallery-overlay {
+          opacity: 1;
+        }
+      }
+      }
+    }
+  .about-text {
+    font-size: 20rem;
+    font-family: opensans;
+    color: rgb(52, 52, 48);
+    line-height: 1.8;
+    text-align: justify;
+  }
+}
