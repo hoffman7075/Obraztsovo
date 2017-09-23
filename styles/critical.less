@@ -53,14 +53,11 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background: #f8f8f8;
+  background: #fff;
 }
 
 a {
   text-decoration: none;
-}
-
-a {
   &:focus {
     border: none;
     outline: none;
@@ -78,13 +75,21 @@ ul {list-style: none;}
   margin: 0 auto;
 }
 
-header {
+header, footer {
   background-color: #fff;
   padding: 15rem 0;
   .wrapper {
     .flex-block();
     .justify-content(space-between);
     .align-items(center);
+    .logo {
+      a {
+        display: block;
+        img {
+          height: 4.1vw;
+        }
+      }
+    }
     nav {
       ul {
         .flex-block();
@@ -94,7 +99,6 @@ header {
           margin: 0 15rem;
           position: relative;
           &:nth-child(1) {
-            color: #589233;
             margin-left: 0;
           }
           &::after {
@@ -109,6 +113,9 @@ header {
               display: none;
             }
           }
+          &:hover {
+            color: #589233;
+          }
         }
       }
     }
@@ -120,8 +127,20 @@ header {
         font-size: 24rem;
         font-family: opensansbold;
         margin-right: 15rem;
+        position: relative;
         &:last-child {
           margin: 0;
+        }
+        &.tel-phone::before {
+          content: '';
+          height: 40px;
+          width: 1px;
+          background-color: #d8d8d8;
+          position: absolute;
+          left: -5px;
+          top: 0;
+          bottom: 0;
+          margin: auto;
         }
       }
       #phone-icon {
@@ -134,18 +153,22 @@ header {
 
 .banner {
   position: relative;
-  height: calc(~"100vh - 128px");
+  //height: calc(~"100vh - 128px");
+  height: calc(~"100vh - 7vw");
+  background: #F2F1F0;
   background-image: url(../img/wave.png), url(../img/bg.jpg);
   background-repeat: repeat-x, no-repeat;
   background-position: center top, center;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
   clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
   .wrapper {
-    padding-top: 15vh;
+    //padding-top: 15vh;
+    padding-top: 4.5vw;
   }
   .banner-title-big {
     .text-shadow(0px 0px 27px rgba(40, 40, 31, 0.6));
-    font-size: 60rem;
+    //font-size: 60rem;
+    font-size: 3vw;
     font-family: opensansbold;
     color: #fff;
     text-transform: uppercase;
@@ -153,35 +176,46 @@ header {
     margin-bottom: 2vh;
   }
   p {
-    font-size: 36rem;
+    //font-size: 36rem;
+    font-size: 1.8vw;
     font-family: opensans;
     color: rgb(255, 255, 255);
     line-height: 1.333;
     text-align: center;
     .text-shadow(0px 1px 0px rgba(22, 28, 9, 0.004));
-    margin-bottom: 6vh;
+    //margin-bottom: 6vh;
+    margin-bottom: 3vw;
   }
   .banner-icons {
     .flex-block();
     .justify-content(space-around);
     margin-bottom: 6vh;
+    .banner-icon {
+      height: 6.5vw;
+      img {
+        height: 100%;
+      }
+    }
   }
   .banner-button {
     border-radius: 55px;
-    background-color: rgb(227, 182, 52);
-    //opacity: 0.302;
-    width: 580rem;
-    padding: 30rem;
+    background-color: rgba(227, 182, 52, 0.3);
+    //width: 580rem;
+    width: 30vw;
+    //padding: 30rem;
+    padding: 1.5vw;
     text-align: center;
     margin: 0 auto;
     .banner-button-wrapper {
         border-radius: 35px;
+        padding: 15px;
         background-image: -moz-linear-gradient( 90deg, rgb(209,123,12) 0%, rgb(224,173,18) 100%);
         background-image: -webkit-linear-gradient( 90deg, rgb(209,123,12) 0%, rgb(224,173,18) 100%);
         background-image: -ms-linear-gradient( 90deg, rgb(209,123,12) 0%, rgb(224,173,18) 100%);
         box-shadow: 0px 4px 0px 0px rgba(157, 94, 9, 0.004);
       span {
-        font-size: 18rem;
+        //font-size: 18rem;
+        font-size: 1vw;
         font-family: opensansbold;
         color: rgb(255, 255, 255);
         text-transform: uppercase;
@@ -201,5 +235,9 @@ header {
     right: 0;
     margin: auto;
     text-align: center;
+    cursor: pointer;
+    img {
+      width: 3.8vw;
+    }
   }
 }

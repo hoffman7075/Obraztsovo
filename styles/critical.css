@@ -35,7 +35,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background: #f8f8f8;
+  background: #fff;
 }
 a {
   text-decoration: none;
@@ -54,11 +54,13 @@ ul {
   width: 1180rem;
   margin: 0 auto;
 }
-header {
+header,
+footer {
   background-color: #fff;
   padding: 15rem 0;
 }
-header .wrapper {
+header .wrapper,
+footer .wrapper {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -73,34 +75,52 @@ header .wrapper {
   -webkit-align-items: center;
   align-items: center;
 }
-header .wrapper nav ul {
+header .wrapper .logo a,
+footer .wrapper .logo a {
+  display: block;
+}
+header .wrapper .logo a img,
+footer .wrapper .logo a img {
+  height: 4.1vw;
+}
+header .wrapper nav ul,
+footer .wrapper nav ul {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
 }
-header .wrapper nav ul li {
+header .wrapper nav ul li,
+footer .wrapper nav ul li {
   font-family: opensansbold;
   font-size: 14rem;
   margin: 0 15rem;
   position: relative;
 }
-header .wrapper nav ul li:nth-child(1) {
-  color: #589233;
+header .wrapper nav ul li:nth-child(1),
+footer .wrapper nav ul li:nth-child(1) {
   margin-left: 0;
 }
-header .wrapper nav ul li::after {
+header .wrapper nav ul li::after,
+footer .wrapper nav ul li::after {
   content: '|';
   color: #000;
   position: absolute;
   right: -20rem;
 }
-header .wrapper nav ul li:last-child {
+header .wrapper nav ul li:last-child,
+footer .wrapper nav ul li:last-child {
   margin-right: 0;
 }
-header .wrapper nav ul li:last-child::after {
+header .wrapper nav ul li:last-child::after,
+footer .wrapper nav ul li:last-child::after {
   display: none;
 }
-header .wrapper .contacts {
+header .wrapper nav ul li:hover,
+footer .wrapper nav ul li:hover {
+  color: #589233;
+}
+header .wrapper .contacts,
+footer .wrapper .contacts {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -110,22 +130,39 @@ header .wrapper .contacts {
   -webkit-align-items: center;
   align-items: center;
 }
-header .wrapper .contacts a {
+header .wrapper .contacts a,
+footer .wrapper .contacts a {
   color: #000;
   font-size: 24rem;
   font-family: opensansbold;
   margin-right: 15rem;
+  position: relative;
 }
-header .wrapper .contacts a:last-child {
+header .wrapper .contacts a:last-child,
+footer .wrapper .contacts a:last-child {
   margin: 0;
 }
-header .wrapper .contacts #phone-icon {
+header .wrapper .contacts a.tel-phone::before,
+footer .wrapper .contacts a.tel-phone::before {
+  content: '';
+  height: 40px;
+  width: 1px;
+  background-color: #d8d8d8;
+  position: absolute;
+  left: -5px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+header .wrapper .contacts #phone-icon,
+footer .wrapper .contacts #phone-icon {
   fill: #589233;
   fill-rule: evenodd;
 }
 .banner {
   position: relative;
-  height: calc(100vh - 128px);
+  height: calc(100vh - 7vw);
+  background: #F2F1F0;
   background-image: url(../img/wave.png), url(../img/bg.jpg);
   background-repeat: repeat-x, no-repeat;
   background-position: center top, center;
@@ -133,11 +170,11 @@ header .wrapper .contacts #phone-icon {
   clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
 }
 .banner .wrapper {
-  padding-top: 15vh;
+  padding-top: 4.5vw;
 }
 .banner .banner-title-big {
   text-shadow: 0px 0px 27px rgba(40, 40, 31, 0.6);
-  font-size: 60rem;
+  font-size: 3vw;
   font-family: opensansbold;
   color: #fff;
   text-transform: uppercase;
@@ -145,13 +182,13 @@ header .wrapper .contacts #phone-icon {
   margin-bottom: 2vh;
 }
 .banner p {
-  font-size: 36rem;
+  font-size: 1.8vw;
   font-family: opensans;
   color: #ffffff;
   line-height: 1.333;
   text-align: center;
   text-shadow: 0px 1px 0px rgba(22, 28, 9, 0.004);
-  margin-bottom: 6vh;
+  margin-bottom: 3vw;
 }
 .banner .banner-icons {
   display: -ms-flexbox;
@@ -164,23 +201,30 @@ header .wrapper .contacts #phone-icon {
   justify-content: space-around;
   margin-bottom: 6vh;
 }
+.banner .banner-icons .banner-icon {
+  height: 6.5vw;
+}
+.banner .banner-icons .banner-icon img {
+  height: 100%;
+}
 .banner .banner-button {
   border-radius: 55px;
-  background-color: #e3b634;
-  width: 580rem;
-  padding: 30rem;
+  background-color: rgba(227, 182, 52, 0.3);
+  width: 30vw;
+  padding: 1.5vw;
   text-align: center;
   margin: 0 auto;
 }
 .banner .banner-button .banner-button-wrapper {
   border-radius: 35px;
+  padding: 15px;
   background-image: -moz-linear-gradient(90deg, #d17b0c 0%, #e0ad12 100%);
   background-image: -webkit-linear-gradient(90deg, #d17b0c 0%, #e0ad12 100%);
   background-image: -ms-linear-gradient(90deg, #d17b0c 0%, #e0ad12 100%);
   box-shadow: 0px 4px 0px 0px rgba(157, 94, 9, 0.004);
 }
 .banner .banner-button .banner-button-wrapper span {
-  font-size: 18rem;
+  font-size: 1vw;
   font-family: opensansbold;
   color: #ffffff;
   text-transform: uppercase;
@@ -198,4 +242,8 @@ header .wrapper .contacts #phone-icon {
   right: 0;
   margin: auto;
   text-align: center;
+  cursor: pointer;
+}
+.banner .banner-button-down img {
+  width: 3.8vw;
 }
