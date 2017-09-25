@@ -13,9 +13,9 @@ h2.title::after {
   content: '';
   position: absolute;
   background-image: url(../img/line-listik.png);
-  height: 20px;
-  width: 500px;
-  bottom: -30px;
+  height: 20rem;
+  width: 500rem;
+  bottom: -30rem;
   left: 0;
   right: 0;
   margin: auto;
@@ -34,16 +34,16 @@ h2.title.green::after {
   box-shadow: 0px 22px 33px 0px rgba(0, 0, 0, 0.13);
   text-align: center;
   width: 100%;
-  padding: 55px 0;
+  padding: 55rem 0;
 }
 .green-form .title {
   display: block;
-  font-size: 30px;
+  font-size: 30rem;
   font-family: opensansbold;
   color: #ffffff;
   line-height: 1;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 50rem;
 }
 .green-form input {
   display: inline-block;
@@ -56,11 +56,12 @@ h2.title.green::after {
   border-radius: 2px;
   background-color: #ffffff;
   color: #a1a1a1;
-  font-size: 14rem;
+  font-size: 14px;
   font-family: opensansitalic;
   width: 278px;
   height: 43px;
   padding-left: 30px;
+  margin-right: 20px;
 }
 .green-form input[type='submit'] {
   border: none;
@@ -72,7 +73,7 @@ h2.title.green::after {
   width: 280px;
   height: 43px;
   cursor: pointer;
-  font-size: 18rem;
+  font-size: 18px;
   font-family: opensansbold;
   color: #ffffff;
   line-height: 1.667;
@@ -85,18 +86,7 @@ h2.title.green::after {
   background-position: center;
 }
 .about .gallery {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: space-between;
-  -moz-box-pack: space-between;
-  -ms-flex-pack: replace(space-between, "flex-", "");
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
+  text-align: center;
   margin-bottom: 80rem;
 }
 .about .gallery .about-gallery {
@@ -104,6 +94,11 @@ h2.title.green::after {
   margin-bottom: 10rem;
   cursor: pointer;
   line-height: 0;
+  display: inline-block;
+  width: calc(25% - 15rem);
+}
+.about .gallery .about-gallery > img {
+  width: 100%;
 }
 .about .gallery .about-gallery .about-gallery-overlay {
   position: absolute;
@@ -117,7 +112,7 @@ h2.title.green::after {
   opacity: 0;
   background-color: rgba(88, 146, 51, 0.8);
   text-align: center;
-  padding: 0 30px;
+  padding: 0 30rem;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -136,7 +131,7 @@ h2.title.green::after {
   font-family: opensansbold;
   color: #ffffff;
   line-height: 1.667;
-  margin-bottom: 15px;
+  margin-bottom: 15rem;
 }
 .about .gallery .about-gallery .about-gallery-overlay img {
   display: block;
@@ -163,12 +158,12 @@ h2.title.green::after {
 }
 .advantages .left-tree {
   position: absolute;
-  top: -220px;
+  top: -220rem;
   right: 0;
 }
 .advantages .right-tree {
   position: absolute;
-  top: -220px;
+  top: -220rem;
   left: 0;
   -webkit-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
@@ -189,17 +184,13 @@ h2.title.green::after {
   align-items: center;
 }
 .advantages .advantages-advantage:nth-child(2n+1) {
-  -webkit-box-pack: end;
-  -moz-box-pack: end;
-  -ms-flex-pack: replace(end, "flex-", "");
-  -webkit-justify-content: end;
-  justify-content: end;
+  margin-left: 50%;
 }
 .advantages .advantages-advantage .advantages-advantage-image {
-  margin-right: 60px;
+  margin-right: 60rem;
 }
 .advantages .advantages-advantage .advantages-advantage-descr {
-  max-width: 270px;
+  max-width: 270rem;
 }
 .advantages .advantages-advantage .advantages-advantage-descr .title {
   font-size: 24rem;
@@ -249,6 +240,9 @@ h2.title.green::after {
 .placement h2.title {
   padding: 0;
 }
+.placement img {
+  width: 100%;
+}
 .choose {
   background-image: url(../img/bg-3.png);
   background-position: center;
@@ -280,13 +274,13 @@ h2.title.green::after {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
-  margin-bottom: 100px;
+  margin-bottom: 100rem;
 }
 .choose .choose-advantages .choose-advantages-advantage .advantages-advantage-image {
-  margin-right: 30px;
+  margin-right: 30rem;
 }
 .choose .choose-advantages .choose-advantages-advantage .advantages-advantage-descr {
-  max-width: 270px;
+  max-width: 270rem;
 }
 .choose .choose-advantages .choose-advantages-advantage .advantages-advantage-descr .title {
   font-size: 24rem;
@@ -313,9 +307,9 @@ h2.title.green::after {
   position: absolute;
   top: 0;
   left: 20%;
-  max-width: 255px;
-  max-height: 318px;
-  padding: 40px 20px 15px 20px;
+  max-width: 255rem;
+  max-height: 318rem;
+  padding: 40rem 20rem 15rem 20rem;
   transition: 500ms;
 }
 .plan .plan-help p {
@@ -323,10 +317,11 @@ h2.title.green::after {
   font-family: opensansbold;
   color: #343430;
   line-height: 1.667;
-  padding-left: 40px;
+  padding-left: 40rem;
   background-position: center left;
   background-repeat: no-repeat;
-  margin-bottom: 8px;
+  margin-bottom: 8rem;
+  background-size: contain;
 }
 .plan .plan-help p.svobodno {
   background-image: url(../img/krug-grey.png);
@@ -359,9 +354,9 @@ h2.title.green::after {
   text-align: center;
   text-shadow: 0px 1px 0px rgba(157, 94, 9, 0.004);
   border-radius: 50px;
-  padding: 15px 0;
+  padding: 15rem 0;
   cursor: pointer;
-  margin: 15px 0;
+  margin: 15rem 0;
 }
 .plan .plan-help .hide {
   display: table;
@@ -383,6 +378,121 @@ h2.title.green::after {
 .plan .plan-help.close .hide img {
   transform: rotate(180deg);
 }
+.plan .plan-popup {
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  background-color: rgba(255, 255, 255, 0.902);
+  box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.3);
+  max-width: 353rem;
+  max-height: 363rem;
+  overflow: hidden;
+  padding: 18px;
+  display: none;
+}
+.plan .plan-popup.active {
+  display: block;
+}
+.plan .plan-popup .close {
+  max-width: 10px;
+  cursor: pointer;
+  position: absolute;
+  right: 2%;
+  top: 0%;
+}
+.plan .plan-popup .plan-popup-wrapper .images {
+  margin-bottom: 10rem;
+}
+.plan .plan-popup .plan-popup-wrapper .images img {
+  display: inline-block;
+  vertical-align: middle;
+  width: calc(33% - 10rem);
+  margin-left: 10rem;
+}
+.plan .plan-popup .plan-popup-wrapper .images img:first-child {
+  margin: 0;
+}
+.plan .plan-popup .plan-popup-wrapper .info-wrapper {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: replace(center, "flex-", "");
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.plan .plan-popup .plan-popup-wrapper .info-wrapper .ploshad {
+  width: 33%;
+  text-align: center;
+  padding: 0 30rem 0 0;
+}
+.plan .plan-popup .plan-popup-wrapper .info-wrapper .ploshad span {
+  font-size: 24rem;
+  font-family: opensansbold;
+  color: #589233;
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: center;
+}
+.plan .plan-popup .plan-popup-wrapper .info-wrapper .ploshad img {
+  max-width: 63px;
+}
+.plan .plan-popup .plan-popup-wrapper .info-wrapper .info span {
+  display: block;
+  font-size: 14rem;
+  color: #343430;
+}
+.plan .plan-popup .plan-popup-wrapper .info-wrapper .info span.green {
+  color: #589233;
+  font-family: opensansbold;
+}
+.plan .plan-popup .plan-popup-wrapper .info-wrapper .info span.green.price {
+  font-size: 24rem;
+}
+.plan .plan-popup .plan-popup-wrapper .info-wrapper .info span.green.price small {
+  font-size: 14rem;
+  font-family: inherit;
+}
+.plan .plan-popup .plan-popup-wrapper .info-wrapper .info span:nth-child(2n) {
+  margin-bottom: 12rem;
+}
+.plan .plan-popup .plan-popup-wrapper .green-line {
+  background-color: #589233;
+  width: 100%;
+  height: 2px;
+}
+.plan .plan-popup .plan-popup-wrapper p {
+  display: block;
+  text-align: center;
+  font-family: opensansbold;
+  font-size: 16rem;
+  line-height: 1.5;
+}
+.plan .plan-popup .plan-popup-wrapper p font {
+  font-family: inherit;
+  font-size: 24rem;
+  color: #589233;
+}
+.plan .plan-popup .plan-popup-wrapper p font small {
+  color: inherit;
+  font-family: inherit;
+  font-size: 16rem;
+}
+.kuchastku {
+  position: relative;
+  overflow: hidden;
+}
+.kuchastku .tree {
+  position: absolute;
+  transform: translateY(-55%);
+  width: 18vw;
+}
 .kuchastku .lists {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -398,7 +508,7 @@ h2.title.green::after {
 }
 .kuchastku .lists .list li {
   position: relative;
-  font-size: 18px;
+  font-size: 18rem;
   color: #343430;
   line-height: 1.5;
   background-image: url(../img/plus.png);
@@ -406,7 +516,7 @@ h2.title.green::after {
   background-position: left center;
   padding-left: 40px;
   max-width: 400px;
-  min-height: 55px;
+  min-height: 55rem;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -415,14 +525,14 @@ h2.title.green::after {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
-  margin-left: 150px;
+  margin-left: 150rem;
 }
 .kuchastku .lists .list li::before {
   content: '';
   position: absolute;
-  width: 150px;
+  width: 150rem;
   margin-right: 5px;
-  left: -150px;
+  left: -150rem;
   height: 1px;
   border-top: 1px solid #D2D6D9;
   top: 50%;
@@ -433,7 +543,7 @@ h2.title.green::after {
   border-left: 1px solid #D2D6D9;
   height: 100%;
   width: 1px;
-  left: -150px;
+  left: -150rem;
   top: 0px;
 }
 .kuchastku .lists .list li:last-child:after {
@@ -442,6 +552,16 @@ h2.title.green::after {
 .kuchastku .lists .list li:first-child:after {
   height: 50%;
   top: 50%;
+}
+.houses {
+  position: relative;
+}
+.houses .tree {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translateY(55%);
+  width: 18vw;
 }
 .houses .green-form {
   transform: translateY(25%);
@@ -467,11 +587,11 @@ h2.title.green::after {
   margin: auto;
   background-color: rgba(255, 255, 255, 0.9);
   width: 90%;
-  height: 80px;
-  padding: 10px;
+  height: 80rem;
+  padding: 10rem;
 }
 .houses .item .house .house-info img {
-  max-width: 12px;
+  max-width: 12rem;
   width: auto;
   display: inline;
 }
@@ -558,19 +678,9 @@ h2.title.green::after {
   display: block;
   margin-bottom: 40rem;
 }
-.two-years .two-years-wrapper .two-years-photos-wrapper {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: space-between;
-  -moz-box-pack: space-between;
-  -ms-flex-pack: replace(space-between, "flex-", "");
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
+.two-years .two-years-wrapper .two-years-photos-wrapper img {
+  display: inline-block;
+  width: 49%;
 }
 .partners {
   background-image: url(../img/bg-3.png);
@@ -584,6 +694,11 @@ h2.title.green::after {
   -ms-flex-pack: replace(space-between, "flex-", "");
   -webkit-justify-content: space-between;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
   padding-bottom: 60rem;
 }
 .partners .partners-photos img {
@@ -591,6 +706,7 @@ h2.title.green::after {
   -ms-align-self: center;
   -webkit-align-self: center;
   align-self: center;
+  width: 100%;
 }
 .banner.footer {
   background-image: url(../img/wave180.png), url(../img/bg.jpg);
@@ -601,4 +717,142 @@ h2.title.green::after {
 }
 .banner.footer .wrapper {
   padding-bottom: 4.5vw;
+}
+@media screen and (max-width: 1200px) {
+  .green-form input[type="submit"] {
+    margin-top: 30px;
+  }
+  .kuchastku .lists .list li {
+    margin-left: 100rem;
+    max-width: 320rem;
+    min-height: 85rem;
+  }
+  .kuchastku .lists .list li::before {
+    width: 90rem;
+    left: -90rem;
+  }
+  .kuchastku .lists .list li::after {
+    left: -90rem;
+  }
+  .houses .item {
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .partners .partners-photos > div {
+    margin-left: 60rem;
+  }
+  .partners .partners-photos > div:first-child {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 720px) {
+  .banner {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
+  }
+  .about .gallery .about-gallery {
+    width: calc(49% - 15rem);
+    margin-bottom: 10px;
+  }
+  .advantages .left-tree,
+  .advantages .right-tree {
+    display: none;
+  }
+  .advantages-advantage-image img {
+    width: 60px;
+  }
+  .advantages .advantages-advantage:nth-child(2n+1) {
+    margin-left: 25%;
+  }
+  .green-form {
+    padding: 55rem 40px;
+  }
+  .green-form input[type="text"] {
+    margin: 0 auto;
+    margin-bottom: 15px;
+    height: 30px;
+    width: 100%;
+  }
+  .green-form input[type="submit"] {
+    height: 30px;
+    margin: 0;
+    width: 100%;
+  }
+  .choose .choose-advantages .choose-advantages-advantage {
+    width: 50%;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .choose .choose-advantages .choose-advantages-advantage .advantages-advantage-image {
+    margin: 0;
+  }
+  .choose .choose-advantages .choose-advantages-advantage .advantages-advantage-descr {
+    text-align: center;
+  }
+  .plan .plan-help {
+    max-width: 80px;
+    max-height: 110px;
+    padding: 15rem 10rem 15rem 10rem;
+  }
+  .plan .plan-help p {
+    font-size: 8px;
+    line-height: 1;
+  }
+  .plan .plan-help .priglash {
+    font-size: 8px;
+    line-height: 1;
+  }
+  .plan .plan-help .button {
+    padding: 5rem 0;
+    margin: 5rem 0;
+    font-size: 6px;
+  }
+  .plan .plan-help .hide {
+    font-size: 9rem;
+  }
+  .plan .plan-popup {
+    display: none !important;
+  }
+  .kuchastku .lists {
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .kuchastku .tree {
+    display: none;
+  }
+  .two-years .two-years-wrapper .two-years-photos-wrapper img {
+    width: 100%;
+  }
+  .placement .green-form:last-child {
+    transform: translateY(15%);
+  }
+  .partners .partners-photos {
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .partners .partners-photos > div {
+    margin-left: 60rem;
+    width: calc(49% - 60rem);
+    margin-bottom: 20rem;
+  }
+  .partners .partners-photos > div:nth-last-child(2) {
+    margin: 0;
+  }
+  .houses .tree {
+    display: none;
+  }
+  .houses .green-form {
+    transform: translateY(15%);
+  }
+  .houses .item .house:first-child {
+    margin-bottom: 30px;
+  }
 }

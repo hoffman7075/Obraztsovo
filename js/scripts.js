@@ -6,8 +6,30 @@ $(document).ready(function () {
         }, 1000);
     })
 
-    // adaptive map
-    $('img[usemap]').rwdImageMaps();
+    // menu -- TREBUET OPTIMIZACII !!
+    $('nav ul li:nth-child(1), .mobile-menu ul li:nth-child(1)').on('click', function () {
+        $('html, body').animate({
+            scrollTop: $(".about").offset().top
+        }, 1000);
+        $('body').find('.mobile-menu').toggleClass('active');
+        $('body').find('.overlay').toggleClass('active');
+    })
+
+    $('nav ul li:nth-child(2), .mobile-menu ul li:nth-child(2)').on('click', function () {
+        $('html, body').animate({
+            scrollTop: $(".plan").offset().top
+        }, 1000);
+        $('body').find('.mobile-menu').toggleClass('active');
+        $('body').find('.overlay').toggleClass('active');
+    })
+
+    $('nav ul li:nth-child(3), .mobile-menu ul li:nth-child(3)').on('click', function () {
+        $('html, body').animate({
+            scrollTop: $(".two-years").offset().top
+        }, 1000);
+        $('body').find('.mobile-menu').toggleClass('active');
+        $('body').find('.overlay').toggleClass('active');
+    })
 
     // hide/close help
     $('.plan .plan-help .hide').on('click', function () {
@@ -23,10 +45,35 @@ $(document).ready(function () {
         items:2,
         loop:false,
         margin:15,
+        lazyLoad:true,
         nav: true,
         dots: true,
-        navText: ['<img src="img/arrow-left.png" >','<img src="img/arrow-left.png" >']
+        navText: ['<img src="img/arrow-left.png" >','<img src="img/arrow-left.png" >'],
+        responsive:{
+            0:{
+                items:1
+            },
+            720:{
+                items:2
+            }
+        }
     });
 
-
+    // hide-close mobile menu
+    $('.mobile-menu-trigger').on('click', function () {
+        $('body').find('.mobile-menu').toggleClass('active');
+        $('body').find('.overlay').toggleClass('active');
+    })
+    $('.mobile-menu .close').on('click', function () {
+        $('body').find('.mobile-menu').toggleClass('active');
+        $('body').find('.overlay').toggleClass('active');
+    })
+    
+    // svg map
+    $('.fil5').on('click', function () {
+        $('.plan').find('.plan-popup').addClass('active');
+    })
+    $('.plan .plan-popup .close').on('click', function () {
+        $('.plan').find('.plan-popup').removeClass('active');
+    })
 })
