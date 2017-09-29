@@ -58,11 +58,108 @@ ul {
 .overlay {
   display: none;
 }
+.overlay.active {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.4);
+  z-index: 5;
+  display: block;
+}
+.modal-form {
+  border-radius: 3px;
+  background-color: #589233;
+  box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.2);
+  width: 413px;
+  height: 450px;
+  box-sizing: border-box;
+  padding: 40px;
+}
+.modal-form .close-modal {
+  position: fixed;
+  right: 5%;
+  top: 5%;
+  cursor: pointer;
+}
+.modal-form form p {
+  font-size: 30rem;
+  font-family: opensansbold;
+  color: #ffffff;
+  line-height: 1;
+  text-align: center;
+}
+.modal-form form input {
+  display: block;
+  margin: 0 auto;
+}
+.modal-form form input[type="text"] {
+  border-width: 1px;
+  border-color: #e5e5e5;
+  border-style: solid;
+  border-radius: 2px;
+  background-color: #ffffff;
+  color: #a1a1a1;
+  font-size: 14px;
+  font-family: opensansitalic;
+  width: 278px;
+  height: 43px;
+  padding-left: 30px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.modal-form form input[type="submit"] {
+  border: none;
+  border-radius: 2px;
+  background-image: -moz-linear-gradient(90deg, #d17b0c 0%, #e0ad12 100%);
+  background-image: -webkit-linear-gradient(90deg, #d17b0c 0%, #e0ad12 100%);
+  background-image: -ms-linear-gradient(90deg, #d17b0c 0%, #e0ad12 100%);
+  box-shadow: 0px 2px 0px 0px rgba(157, 94, 9, 0.004);
+  width: 280px;
+  height: 43px;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: opensansbold;
+  color: #ffffff;
+  line-height: 1.667;
+  text-shadow: 0px 1px 0px rgba(157, 94, 9, 0.004);
+}
+.modal-form form input[type="submit"]:hover {
+  background-image: -moz-linear-gradient(90deg, #d17b0c 0%, #ffc30f 100%);
+  background-image: -webkit-linear-gradient(90deg, #d17b0c 0%, #ffc30f 100%);
+  background-image: -ms-linear-gradient(90deg, #d17b0c 0%, #ffc30f 100%);
+}
+.modal-form .after-send {
+  margin-top: 10%;
+  display: none;
+}
+.modal-form .after-send button {
+  width: 100%;
+}
+.modal-form .after-send p {
+  font-size: 25rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.modal-form.modal {
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: none;
+  opacity: 0;
+  z-index: 12;
+  height: auto;
+}
 .mobile-menu {
   display: none;
 }
 .mobile-menu-trigger {
   display: none;
+}
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
 }
 header,
 footer {
@@ -157,7 +254,7 @@ footer .wrapper .contacts a:last-child {
 header .wrapper .contacts a.tel-phone::before,
 footer .wrapper .contacts a.tel-phone::before {
   content: '';
-  height: 40px;
+  height: 40rem;
   width: 1px;
   background-color: #d8d8d8;
   position: absolute;
@@ -173,7 +270,7 @@ footer .wrapper .contacts #phone-icon {
 }
 .banner {
   position: relative;
-  height: calc(100vh - 7vw);
+  height: 100vh;
   background: #F2F1F0;
   background-image: url(../img/wave.png), url(../img/bg.jpg);
   background-repeat: repeat-x, no-repeat;
@@ -215,9 +312,33 @@ footer .wrapper .contacts #phone-icon {
 }
 .banner .banner-icons .banner-icon {
   height: 6.5vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-align: center;
 }
 .banner .banner-icons .banner-icon img {
   height: 100%;
+}
+.banner .banner-icons .banner-icon span {
+  color: #fff;
+  height: 6.5vw;
+  display: block;
+  line-height: 8.5vw;
+  font-size: 1vw;
+}
+.banner .banner-icons .banner-icon.icon1 {
+  background-image: url(../img/icon-1.png);
+}
+.banner .banner-icons .banner-icon.icon2 {
+  background-image: url(../img/icon-2.png);
+}
+.banner .banner-icons .banner-icon.icon2 span {
+  line-height: 1;
+  padding-top: 3.2vw;
+}
+.banner .banner-icons .banner-icon.icon3 {
+  background-image: url(../img/icon-3.png);
 }
 .banner .banner-button {
   border-radius: 55px;
@@ -226,6 +347,8 @@ footer .wrapper .contacts #phone-icon {
   padding: 1.5vw;
   text-align: center;
   margin: 0 auto;
+  cursor: pointer;
+  transition: 200ms;
 }
 .banner .banner-button .banner-button-wrapper {
   border-radius: 35px;
@@ -247,6 +370,9 @@ footer .wrapper .contacts #phone-icon {
   -webkit-transform: matrix(1.09622641509434, 0, 0, 1.09090909090909, 0, 0);
   -ms-transform: matrix(1.09622641509434, 0, 0, 1.09090909090909, 0, 0);
 }
+.banner .banner-button:hover {
+  background-color: rgba(227, 182, 52, 0.5);
+}
 .banner .banner-button-down {
   position: absolute;
   bottom: 0;
@@ -262,16 +388,6 @@ footer .wrapper .contacts #phone-icon {
 @media screen and (max-width: 1200px) {
   html {
     font-size: 0.75px;
-  }
-  .overlay {
-    display: block;
-  }
-  .overlay.active {
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
-    background-color: rgba(255, 255, 255, 0.4);
-    z-index: 5;
   }
   .mobile-menu {
     position: fixed;
@@ -334,6 +450,13 @@ footer .wrapper .contacts #phone-icon {
   .wrapper {
     width: 300px;
   }
+  .modal-form {
+    width: 300px;
+    padding: 25px;
+  }
+  .modal-form form input {
+    width: 100% !important;
+  }
   header .wrapper svg,
   footer .wrapper svg {
     height: 15px;
@@ -363,6 +486,14 @@ footer .wrapper .contacts #phone-icon {
   }
   .banner .banner-icons .banner-icon {
     height: 55px;
+  }
+  .banner .banner-icons .banner-icon span {
+    font-size: 10px;
+    height: 100%;
+    line-height: 75px;
+  }
+  .banner .banner-icons .banner-icon.icon2 span {
+    padding-top: 28px;
   }
   .banner .banner-button {
     width: 230px;

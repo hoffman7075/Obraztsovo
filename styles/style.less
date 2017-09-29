@@ -84,6 +84,11 @@ h2 {
       color: rgb(255, 255, 255);
       line-height: 1.667;
       text-shadow: 0px 1px 0px rgba(157, 94, 9, 0.004);
+    &:hover {
+      background-image: -moz-linear-gradient(90deg, #d17b0c 0%, #ffc30f 100%);
+      background-image: -webkit-linear-gradient(90deg, #d17b0c 0%, #ffc30f 100%);
+      background-image: -ms-linear-gradient(90deg, #d17b0c 0%, #ffc30f 100%);
+    }
   }
 }
 
@@ -160,12 +165,12 @@ h2 {
   .left-tree {
     position: absolute;
     top: -220rem;
-    right: 0;
+    right: -8vw;
   }
   .right-tree {
     position: absolute;
     top: -220rem;
-    left: 0;
+    left: -8vw;
     .transform(scale(-1,1));
   }
   .left-tree, .right-tree {
@@ -227,6 +232,23 @@ h2 {
   background: #f7f7f6;
   .green-form:first-child {
     transform: translateY(-25%);
+    position: relative;
+    .listik-left {
+      position: absolute;
+      left: 0;
+      top: 0;
+      max-width: 246rem;
+      width: 10vw;
+      transform: translateX(-130%);
+    }
+    .listik-right {
+      position: absolute;
+      right: 0;
+      top: 0;
+      max-width: 188rem;
+      width: 10vw;
+      transform: translateX(130%);
+    }
   }
   .green-form:last-child {
     transform: translateY(25%);
@@ -337,6 +359,11 @@ h2 {
       padding: 15rem 0;
       cursor: pointer;
       margin: 15rem 0;
+      &:hover {
+        background-image: -moz-linear-gradient( 90deg, rgb(209,123,12) 0%, rgb(255, 195, 15) 100%);
+        background-image: -webkit-linear-gradient( 90deg, rgb(209,123,12) 0%, rgb(255, 195, 15) 100%);
+        background-image: -ms-linear-gradient( 90deg, rgb(209,123,12) 0%, rgb(255, 195, 15) 100%);
+      }
     }
     .hide {
       display: table;
@@ -363,7 +390,6 @@ h2 {
   }
   .plan-popup {
     position: absolute;
-    right: 5%;
     top: 5%;
     background-color: rgba(255, 255, 255, 0.902);
     box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.3);
@@ -371,9 +397,11 @@ h2 {
     max-height: 363rem;
     overflow: hidden;
     padding: 18px;
-    display: none;
+    opacity: 0;
+    z-index: -1;
     &.active {
-      display: block;
+      opacity: 1;
+      z-index: 1;
     }
     .close {
       max-width: 10px;
@@ -384,14 +412,19 @@ h2 {
     }
     .plan-popup-wrapper {
       .images {
-        margin-bottom: 10rem;
-        img {
-          display: inline-block;
-          vertical-align: middle;
-          width: calc(~"33% - 10rem");
-          margin-left: 10rem;
-          &:first-child {
-            margin: 0;
+        display: none;
+      }
+      &.house {
+        .images {
+          margin-bottom: 10rem;
+          img {
+            display: inline-block;
+            vertical-align: middle;
+            width: calc(~"33% - 10rem");
+            margin-left: 10rem;
+            &:first-child {
+              margin: 0;
+            }
           }
         }
       }
@@ -415,6 +448,9 @@ h2 {
           img {
             max-width: 63px;
           }
+        }
+        .info {
+          width: 67%;
         }
 
         .info {
@@ -546,6 +582,7 @@ h2 {
 
 .houses {
   position: relative;
+  overflow: hidden;
   .tree {
     position: absolute;
     bottom: 0;
@@ -554,10 +591,7 @@ h2 {
     width: 18vw;
   }
   .owl {
-    //margin-bottom: 80rem;
-  }
-  .green-form {
-    transform: translateY(25%);
+    margin-bottom: 240rem;
   }
   .item {
     .flex-block();
@@ -573,10 +607,10 @@ h2 {
         margin: auto;
         background-color: rgba(255, 255, 255, 0.9);
         width: 90%;
-        height: 80rem;
+        height: 80px;
         padding: 10rem;
         img {
-          max-width: 12rem;
+          max-width: 12px;
           width:auto;
           display: inline;
         }
@@ -585,16 +619,16 @@ h2 {
         }
         .address {
           color: #589233;
-          font-size: 14rem;
+          font-size: 14px;
           font-family:opensansbold;
         }
         .material {
           color: #343430;
-          font-size: 14rem;
+          font-size: 14px;
           font-family:opensansbold;
           font {
             color: #589233;
-            font-size: 14rem;
+            font-size: 14px;
             font-family:inherit;
           }
         }
@@ -602,11 +636,11 @@ h2 {
           .flex-block();
           .justify-content(space-between);
           span {
-            font-size: 16rem;
+            font-size: 16px;
             font-family:opensansbold;
             color: #589233;
             small {
-              font-size: 12rem;
+              font-size: 12px;
               color: #343430;
               font-family: inherit;
             }
@@ -628,6 +662,13 @@ h2 {
   background-image: url(../img/wave.png);
   background-position: center top;
   background-repeat: repeat-x;
+  .wrapper {
+    position: relative;
+  }
+  .green-form {
+    transform: translateY(-75%);
+    position: absolute;
+  }
   h2.title {
     margin-bottom: 60rem;
     padding-top: 100rem;
@@ -720,6 +761,14 @@ h2 {
 
   .houses .item {
     .flex-direction(column);
+  }
+
+  .houses .owl {
+    margin-bottom: 250px;
+  }
+
+  .two-years h2.title {
+    padding-top: 120px;
   }
 
   .partners {
@@ -829,6 +878,9 @@ h2 {
   .placement {
     .green-form:last-child {
       transform: translateY(15%);
+    }
+    .listik-left, .listik-right {
+      display: none;
     }
   }
 

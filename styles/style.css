@@ -79,6 +79,11 @@ h2.title.green::after {
   line-height: 1.667;
   text-shadow: 0px 1px 0px rgba(157, 94, 9, 0.004);
 }
+.green-form input[type='submit']:hover {
+  background-image: -moz-linear-gradient(90deg, #d17b0c 0%, #ffc30f 100%);
+  background-image: -webkit-linear-gradient(90deg, #d17b0c 0%, #ffc30f 100%);
+  background-image: -ms-linear-gradient(90deg, #d17b0c 0%, #ffc30f 100%);
+}
 .about {
   background-image: url(../img/bg-2.png);
   background-color: #f1f1ef;
@@ -159,12 +164,12 @@ h2.title.green::after {
 .advantages .left-tree {
   position: absolute;
   top: -220rem;
-  right: 0;
+  right: -8vw;
 }
 .advantages .right-tree {
   position: absolute;
   top: -220rem;
-  left: 0;
+  left: -8vw;
   -webkit-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
   transform: scale(-1, 1);
@@ -233,6 +238,23 @@ h2.title.green::after {
 }
 .placement .green-form:first-child {
   transform: translateY(-25%);
+  position: relative;
+}
+.placement .green-form:first-child .listik-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-width: 246rem;
+  width: 10vw;
+  transform: translateX(-130%);
+}
+.placement .green-form:first-child .listik-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  max-width: 188rem;
+  width: 10vw;
+  transform: translateX(130%);
 }
 .placement .green-form:last-child {
   transform: translateY(25%);
@@ -358,6 +380,11 @@ h2.title.green::after {
   cursor: pointer;
   margin: 15rem 0;
 }
+.plan .plan-help .button:hover {
+  background-image: -moz-linear-gradient(90deg, #d17b0c 0%, #ffc30f 100%);
+  background-image: -webkit-linear-gradient(90deg, #d17b0c 0%, #ffc30f 100%);
+  background-image: -ms-linear-gradient(90deg, #d17b0c 0%, #ffc30f 100%);
+}
 .plan .plan-help .hide {
   display: table;
   font-size: 14rem;
@@ -380,7 +407,6 @@ h2.title.green::after {
 }
 .plan .plan-popup {
   position: absolute;
-  right: 5%;
   top: 5%;
   background-color: rgba(255, 255, 255, 0.902);
   box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.3);
@@ -388,10 +414,12 @@ h2.title.green::after {
   max-height: 363rem;
   overflow: hidden;
   padding: 18px;
-  display: none;
+  opacity: 0;
+  z-index: -1;
 }
 .plan .plan-popup.active {
-  display: block;
+  opacity: 1;
+  z-index: 1;
 }
 .plan .plan-popup .close {
   max-width: 10px;
@@ -401,15 +429,18 @@ h2.title.green::after {
   top: 0%;
 }
 .plan .plan-popup .plan-popup-wrapper .images {
+  display: none;
+}
+.plan .plan-popup .plan-popup-wrapper.house .images {
   margin-bottom: 10rem;
 }
-.plan .plan-popup .plan-popup-wrapper .images img {
+.plan .plan-popup .plan-popup-wrapper.house .images img {
   display: inline-block;
   vertical-align: middle;
   width: calc(33% - 10rem);
   margin-left: 10rem;
 }
-.plan .plan-popup .plan-popup-wrapper .images img:first-child {
+.plan .plan-popup .plan-popup-wrapper.house .images img:first-child {
   margin: 0;
 }
 .plan .plan-popup .plan-popup-wrapper .info-wrapper {
@@ -442,6 +473,9 @@ h2.title.green::after {
 }
 .plan .plan-popup .plan-popup-wrapper .info-wrapper .ploshad img {
   max-width: 63px;
+}
+.plan .plan-popup .plan-popup-wrapper .info-wrapper .info {
+  width: 67%;
 }
 .plan .plan-popup .plan-popup-wrapper .info-wrapper .info span {
   display: block;
@@ -555,6 +589,7 @@ h2.title.green::after {
 }
 .houses {
   position: relative;
+  overflow: hidden;
 }
 .houses .tree {
   position: absolute;
@@ -563,8 +598,8 @@ h2.title.green::after {
   transform: translateY(55%);
   width: 18vw;
 }
-.houses .green-form {
-  transform: translateY(25%);
+.houses .owl {
+  margin-bottom: 240rem;
 }
 .houses .item {
   display: -ms-flexbox;
@@ -587,11 +622,11 @@ h2.title.green::after {
   margin: auto;
   background-color: rgba(255, 255, 255, 0.9);
   width: 90%;
-  height: 80rem;
+  height: 80px;
   padding: 10rem;
 }
 .houses .item .house .house-info img {
-  max-width: 12rem;
+  max-width: 12px;
   width: auto;
   display: inline;
 }
@@ -600,17 +635,17 @@ h2.title.green::after {
 }
 .houses .item .house .house-info .address {
   color: #589233;
-  font-size: 14rem;
+  font-size: 14px;
   font-family: opensansbold;
 }
 .houses .item .house .house-info .material {
   color: #343430;
-  font-size: 14rem;
+  font-size: 14px;
   font-family: opensansbold;
 }
 .houses .item .house .house-info .material font {
   color: #589233;
-  font-size: 14rem;
+  font-size: 14px;
   font-family: inherit;
 }
 .houses .item .house .house-info .razmer {
@@ -624,12 +659,12 @@ h2.title.green::after {
   justify-content: space-between;
 }
 .houses .item .house .house-info .razmer span {
-  font-size: 16rem;
+  font-size: 16px;
   font-family: opensansbold;
   color: #589233;
 }
 .houses .item .house .house-info .razmer span small {
-  font-size: 12rem;
+  font-size: 12px;
   color: #343430;
   font-family: inherit;
 }
@@ -644,6 +679,13 @@ h2.title.green::after {
   background-image: url(../img/wave.png);
   background-position: center top;
   background-repeat: repeat-x;
+}
+.two-years .wrapper {
+  position: relative;
+}
+.two-years .green-form {
+  transform: translateY(-75%);
+  position: absolute;
 }
 .two-years h2.title {
   margin-bottom: 60rem;
@@ -740,6 +782,12 @@ h2.title.green::after {
     -ms-flex-direction: column;
     flex-direction: column;
   }
+  .houses .owl {
+    margin-bottom: 250px;
+  }
+  .two-years h2.title {
+    padding-top: 120px;
+  }
   .partners .partners-photos > div {
     margin-left: 60rem;
   }
@@ -831,6 +879,10 @@ h2.title.green::after {
   }
   .placement .green-form:last-child {
     transform: translateY(15%);
+  }
+  .placement .listik-left,
+  .placement .listik-right {
+    display: none;
   }
   .partners .partners-photos {
     -webkit-flex-wrap: wrap;
