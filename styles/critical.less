@@ -171,7 +171,7 @@ ul {list-style: none;}
     position: fixed;
     top: 45%;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    .transform(translateX(-50%) translateY(-50%));
     display: none;
     opacity: 0;
     z-index: 12;
@@ -409,12 +409,12 @@ header, footer {
     height: 100vh;
     background-color: #589233;
     z-index: 10;
-    max-width: 259px;
+    width: 259px;
     padding: 30px;
-    transform: translateX(-259px);
+    .transform(translateX(-259px));
     display: block;
     &.active {
-      transform: translateX(0);
+      .transform(translateX(0));
     }
     .close {
       position: absolute;
@@ -489,6 +489,7 @@ header, footer {
       }
       .mobile-menu-trigger {
         margin: 0;
+        margin-right: 10px;
       }
       .logo {
         a {
@@ -501,9 +502,10 @@ header, footer {
   }
 
   .banner {
-    height: 50vh;
+    height: auto;
     .wrapper {
       padding-top: 5.5vh;
+      padding-bottom: 5.5vh;
     }
     .banner-title-big {
       font-size: 16px;
