@@ -33,14 +33,25 @@ $(document).ready(function () {
         }
     });
 
+    // $('.house-photos').owlCarousel({
+    //     items:1,
+    //     dots: false,
+    //     nav: true,
+    //     navText: ['<img src="img/arrow-left-white.png" >','<img src="img/arrow-left-white.png" >'],
+    // });
+
     // maskedinput
     $('input[name="tel"]').mask("+7 (999) 999-9999",{placeholder:"+7 (___) ___-____"});
 
     // end plugins
     
     // modal
-    $('.banner-button, .plan .plan-help .button').on('click', function () {
+    $('.banner-button, .plan .plan-help .button, .modal-house .btn').on('click', function () {
         openModal($('.modal-form'));
+    })
+
+    $('.houses .item .house').on('click', function () {
+        openModal($('.modal-house'));
     })
 
     $('.overlay, .close-modal').on('click',function () {

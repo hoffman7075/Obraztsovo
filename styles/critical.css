@@ -66,14 +66,116 @@ ul {
   z-index: 5;
   display: block;
 }
+.modal-house {
+  background: #E4E4E4 !important;
+}
+.modal-house .house > div {
+  display: inline-block;
+  vertical-align: middle;
+  width: 59%;
+}
+.modal-house .house .owl-stage-outer {
+  margin-bottom: 0;
+}
+.modal-house .house .house-info {
+  padding: 10rem;
+}
+.modal-house .house .house-info img {
+  max-width: 30px;
+  width: auto;
+  display: inline;
+}
+.modal-house .house .house-info > span {
+  display: block;
+}
+.modal-house .house .house-info .address {
+  color: #589233;
+  font-size: 18px;
+  font-family: opensansbold;
+}
+.modal-house .house .house-info .material {
+  color: #343430;
+  font-size: 18px;
+  font-family: opensansbold;
+  line-height: 2;
+}
+.modal-house .house .house-info .material font {
+  color: #589233;
+  font-size: 18px;
+  font-family: inherit;
+}
+.modal-house .house .house-info .price {
+  display: block;
+  font-size: 40px;
+  font-family: opensansbold;
+  color: #589233;
+  line-height: 2;
+}
+.modal-house .house .house-info .price small {
+  font-size: 28px;
+  color: #343430;
+  font-family: inherit;
+}
+.modal-house .house .house-info .price img {
+  margin-right: 10px;
+}
+.modal-house .house .house-info .razmer span {
+  display: block;
+  font-size: 20px;
+  font-family: opensansbold;
+  color: #589233;
+  line-height: 2;
+}
+.modal-house .house .house-info .razmer span font {
+  color: #000;
+  font-family: inherit;
+  font-size: inherit;
+}
+.modal-house .house .house-info .razmer span small {
+  font-size: 16px;
+  color: #343430;
+  font-family: inherit;
+}
+.modal-house .house .btn {
+  display: block;
+  background-image: -moz-linear-gradient(90deg, #d17b0c 0%, #e0ad12 100%);
+  background-image: -webkit-linear-gradient(90deg, #d17b0c 0%, #e0ad12 100%);
+  background-image: -ms-linear-gradient(90deg, #d17b0c 0%, #e0ad12 100%);
+  box-shadow: 0px 2px 0px 0px rgba(157, 94, 9, 0.004);
+  width: 100%;
+  font-size: 20rem;
+  font-family: opensansbold;
+  color: #ffffff;
+  line-height: 1;
+  text-align: center;
+  text-shadow: 0px 1px 0px rgba(157, 94, 9, 0.004);
+  border-radius: 50px;
+  padding: 15rem 0;
+  cursor: pointer;
+  margin: 15rem 0;
+}
+.modal-house .house .house-photos {
+  width: 40%;
+}
+.modal-house .house .house-photos img {
+  width: 100%;
+  cursor: zoom-in;
+}
+.modal-house .house .house-photos .thumbs {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.modal-house .house .house-photos .thumbs .thumb {
+  margin-left: 5rem;
+}
+.modal-house .house .house-photos .thumbs .thumb:first-child {
+  margin: 0;
+}
 .modal-form {
-  border-radius: 3px;
-  background-color: #589233;
-  box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.2);
   width: 413px;
   height: 450px;
-  box-sizing: border-box;
-  padding: 40px;
+  z-index: 20 !important;
 }
 .modal-form .close-modal {
   position: fixed;
@@ -140,7 +242,7 @@ ul {
   text-align: center;
   margin-bottom: 30px;
 }
-.modal-form.modal {
+.modal {
   position: fixed;
   top: 45%;
   left: 50%;
@@ -151,6 +253,17 @@ ul {
   opacity: 0;
   z-index: 12;
   height: auto;
+  border-radius: 3px;
+  background-color: #589233;
+  box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  padding: 40px;
+}
+.modal .close-modal {
+  position: fixed;
+  right: 5%;
+  top: 5%;
+  cursor: pointer;
 }
 .mobile-menu {
   display: none;

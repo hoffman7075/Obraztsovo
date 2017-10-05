@@ -653,6 +653,7 @@ h2.title.green::after {
   justify-content: space-between;
 }
 .houses .item .house {
+  cursor: pointer;
   position: relative;
 }
 .houses .item .house .house-info {
