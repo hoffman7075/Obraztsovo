@@ -547,6 +547,9 @@ footer .wrapper .contacts #phone-icon {
     margin-top: 40px;
     cursor: pointer;
   }
+  .modal-house {
+    width: 710px;
+  }
   .wrapper {
     width: 710px;
   }
@@ -575,6 +578,37 @@ footer .wrapper .contacts #phone-icon {
   }
   .modal-form form input {
     width: 100% !important;
+  }
+  .modal-house {
+    width: 300px;
+  }
+  .modal-house .house > div {
+    display: block;
+    width: 100%;
+  }
+  .modal-house .house .house-photos {
+    margin: 0 auto;
+  }
+  .modal-house .house .house-info img {
+    max-width: 20px;
+  }
+  .modal-house .house .house-info .material {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .modal-house .house .house-info .material font {
+    font-size: 12px;
+  }
+  .modal-house .house .house-info .price {
+    font-size: 30px;
+    line-height: 1.5;
+  }
+  .modal-house .house .house-info .price small {
+    font-size: 20px;
+  }
+  .modal-house .house .house-info .razmer span {
+    line-height: 1.5;
+    font-size: 12px;
   }
   header .wrapper svg,
   footer .wrapper svg {
