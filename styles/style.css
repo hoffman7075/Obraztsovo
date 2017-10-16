@@ -767,6 +767,7 @@ h2.title.green::after {
 .two-years .two-years-wrapper .two-years-photos-wrapper img {
   display: inline-block;
   width: 49%;
+  cursor: pointer;
 }
 .partners {
   background-image: url(../img/bg-3.png);

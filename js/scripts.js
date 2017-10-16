@@ -56,12 +56,13 @@ $(document).ready(function () {
         // get info
         var ulica = $(this).find('.house-info .address').html();
         var material = $(this).find('.house-info .material font').html();
-        var ploshad = $(this).find('.house-info .razmer span:nth-child(1)').html();
+        var ploshad = $(this).find('.house-info .razmer span:nth-child(1)').html().replace("S=","");
         var komnaty = $(this).find('.house-info .razmer span:nth-child(2)').html().replace(/<img[^>]*>/g,"");
         var price = $(this).find('.house-info .razmer span:nth-child(3)').html().replace(/<img[^>]*>/g,"");
 
         // get images
         var mainImage = $(this).attr('main-image');
+        var mainThumb = $(this).attr('main-thumb');
         var thumb1 = $(this).attr('thumb1');
         var thumb2 = $(this).attr('thumb2');
         var thumb3 = $(this).attr('thumb3');
@@ -74,7 +75,7 @@ $(document).ready(function () {
         $('.modal-house .house .house-info .razmer span:nth-child(2)').html('<font>Сколько комнат: </font>'+ komnaty +'');
 
         // set images
-        $('.modal-house .house .house-photos .item img').attr('src',mainImage);
+        $('.modal-house .house .house-photos .item img').attr('src',mainThumb);
         $('.modal-house .house .house-photos .item img').attr('href',mainImage);
         $('.modal-house .house .house-photos .thumbs .thumb:nth-child(1) img').attr('src',thumb1);
         $('.modal-house .house .house-photos .thumbs .thumb:nth-child(1) img').attr('href',thumb1);

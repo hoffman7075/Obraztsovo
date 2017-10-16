@@ -581,6 +581,7 @@ footer .wrapper .contacts #phone-icon {
   }
   .modal-house {
     width: 300px;
+    padding: 20px;
   }
   .modal-house .house > div {
     display: block;
